@@ -1,7 +1,7 @@
-Carlos III University of Madrid
-Master's Thesis Project
-Author: Pedro Marcos Solórzano
-Tutor: Luís Mengibar Pozo
+#Carlos III University of Madrid
+#Master's Thesis Project
+#Author: Pedro Marcos Solórzano
+#Tutor: Luís Mengibar Pozo
 
 Xilinx ISE project for Spartan 3E Starter Kit board.
 
