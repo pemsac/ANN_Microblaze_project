@@ -1,0 +1,289 @@
+/**
+ *
+ * Carlos III University of Madrid.
+ *
+ * Master's Final Thesis. Heartbeat sorter based on Artificial Neural
+ * Network. Development & implementation on FPGA.
+ *
+ * This stand-alone program runs an Heartbeat sorter algorithm developed
+ * by Alexis Martín Cruz & Luís Mengibar Pozo on a Startan 3E's
+ * Microblaze in order to check its performance running directly on a
+ * microprocessor without any hardware acceleration.
+ *
+ * @Author Pedro Marcos Solórzano
+ * @Author Luis Mengibar Pozo (Tutor)
+ *
+ * @file main.c
+ *
+ * @version %G%
+ *
+ */
+
+
+
+/*
+ * LED's GPIO Configuration
+ */
+#define LED_DEVICE_ID           XPAR_LEDS_8BIT_DEVICE_ID
+#define LED_CHANNEL             1
+#define LED_DIRECTION_MASK      0x01
+/*
+ * System state LED codes
+ */
+#define LED_ERROR_STATE         0b11111111
+#define LED_READY_STATE         0b00000001
+#define LED_FILE_ERROR_STATE    0b01010101
+#define LED_SUCCESS_STATE       0b00110001
+/*
+ * UART Configuration
+ */
+#define UART_DEVICE_ID          XPAR_UARTLITE_1_DEVICE_ID
+
+/*
+ * File System configuration
+ * Size in bytes.
+ */
+#define FILE_SYSTEM_BASEADDR 	0x89600000
+#define FILE_SYSTEM_SIZE		1024
+
+/*
+ * Input data configuration:
+ */
+#define NUM_COLUMNS_DATA        2600
+#define NUM_COLUMNS_BEAT        1
+#define NUM_ROWS_DATA           28
+#define NUM_ROWS_RESULT         5
+#define INPUT_DIR               "file_data"
+
+
+/*
+ * Include files
+ */
+#include <stdio.h>
+#include <xilmfs.h>
+#include <xgpio.h>
+#include <xparameters.h>
+#include <xuartlite.h>
+#include "RNA35b.h"
+#include "RNA35b_emxAPI.h"
+
+
+/**
+ * Main code
+ * @function    main()
+ *
+ * @param       none
+ *
+ * @return      XST_FAILURE error in execution
+ *              XST_SUCCESS successful execution
+ */
+int main(){
+	/*
+	 * Local Variables.
+	 */
+	XGpio led;
+	XUartLite uart;
+	int status, i, j, max_value_pos, input_processed=0;
+	double max_value, **datas, **result, **datas_input;
+	emxArray_real_T *inputs, *outputs;
+	FILE *beats_file = NULL;
+
+	/*
+	 * LED's GPIO Initialization
+	 */
+	status = XGpio_Initialize(&led, LED_DEVICE_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	XGpio_SetDataDirection(&led, LED_CHANNEL, LED_DIRECTION_MASK);
+	XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_READY_STATE);
+
+
+	/*
+	 * UART initialization. If there's any problem, the program will stop and
+	 * show the error LED code.
+	 */
+	status = XUartLite_Initialize(&uart, UART_DEVICE_ID);
+	if (status != XST_SUCCESS) {
+		XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_ERROR_STATE);
+		return XST_FAILURE;
+	}
+
+	status = XUartLite_SelfTest(&uart);
+	if (status != XST_SUCCESS) {
+		XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_ERROR_STATE);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Initialize the memory file system
+	 */
+	mfs_init_genimage(FILE_SYSTEM_SIZE, (char*)(FILE_SYSTEM_BASEADDR), MFSINIT_ROM_IMAGE);
+//	status = mfs_change_dir("root");
+//	if (status != 1) {
+//		print("Error setting File System. The program will stop\n");
+//		XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_FILE_ERROR_STATE);
+//		return XST_FAILURE;
+//	}
+	int debug = mfs_change_dir("root");
+	printf("%d",debug);
+	/*
+	 * Open input file in read only mode
+	 */
+	int debug =  mfs_exists_file(INPUT_DIR);
+	printf("%d",debug);
+	beats_file = fopen (INPUT_DIR, "r");
+	if (beats_file==NULL) {
+		print("Error opening file. The program will stop\r\n");
+		XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_FILE_ERROR_STATE);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Allocate NUM_COLUMNS_DATA columns of memory for the multi-dimensional
+	 * double array "datas".
+	 * This array stores all input file data in RAM.
+	 */
+	datas = (double**) malloc (NUM_COLUMNS_DATA * sizeof(double*));
+
+	for (i=0; i<NUM_COLUMNS_DATA; i ++){
+		datas[i] = (double*) malloc (NUM_ROWS_DATA * sizeof(double));
+	}
+
+	/*
+	 * Allocate NUM_COLUMNS_BEAT columns of memory for the multi-dimensional
+	 * array "datas_input".
+	 * This array is used to take the data of a beat to process it.
+	 */
+	datas_input = (double**) malloc (NUM_COLUMNS_BEAT * sizeof(double*));
+	for (i=0; i<NUM_COLUMNS_BEAT; i ++){
+		datas_input[i] = (double*) malloc (NUM_ROWS_DATA * sizeof(double));
+	}
+
+
+	/*
+	 * Allocate memory for the multi-dimensional array "result".
+	 * This array stores the processing results.
+	 */
+	result = (double**) malloc (NUM_COLUMNS_BEAT * sizeof(double*));
+	for (i=0; i<NUM_COLUMNS_BEAT; i ++){
+		result[i] = (double*) malloc (NUM_ROWS_RESULT * sizeof(double));
+	}
+
+	/*
+	 * Load all input data from the file.
+	 */
+	for (i=0; i < NUM_ROWS_DATA; i ++){
+		for (j=0; j < NUM_COLUMNS_DATA; j ++){
+			fscanf (beats_file, "%lf ", &datas[j][i]);
+		}
+	}
+	if(ferror(beats_file)){
+		print("Error reading file. The program will stop\r\n");
+		XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_FILE_ERROR_STATE);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Data processing.
+	 */
+	while (input_processed < NUM_COLUMNS_DATA){
+		/*
+		 * copy the information of a beat from "datas" to "datas_input"
+		 * to be processed.
+		 */
+		for (i=0; i<NUM_COLUMNS_BEAT; i++){
+			memcpy(datas_input[i],
+					&datas[input_processed][0],
+					NUM_ROWS_DATA * sizeof(double));
+		}
+
+		/*
+		 * Artificial Neural Network (ANN) processing.
+		 */
+		inputs = emxCreateWrapper_real_T(*datas_input,
+				NUM_ROWS_DATA,
+				NUM_COLUMNS_BEAT);
+
+		outputs = emxCreateWrapper_real_T(*result,
+				NUM_ROWS_RESULT,
+				NUM_COLUMNS_BEAT);
+
+		RNA35b(inputs, outputs);
+
+		/*
+		 * Analyze the ANN output data. Find & save the max value in the ANN's
+		 * output data array and its index.
+		 */
+		for (j=0; j<NUM_COLUMNS_BEAT; j++){
+			for (i=0, max_value=0.0, max_value_pos=0; i < NUM_ROWS_RESULT; i ++){
+				if (outputs->data[i] > max_value){
+					max_value = outputs->data[i];
+					max_value_pos = i;
+				}
+			}
+
+			/*
+			 * The beat classification depends on the max value index in
+			 * the ANN's output data array. After decoding the beat type, send it
+			 * through UART.
+			 */
+			if (max_value_pos == 0){
+				print(" N Normal Beat\r\n");
+			} else if (max_value_pos == 1){
+				print("S Supraventricular Ectopic Beat\r\n");
+			} else if (max_value_pos == 2){
+				print("V Ventricular Ectopic Beat\r\n");
+			} else if (max_value_pos == 3){
+				print("F Fusion Beat\r\n");
+			}  else if(max_value_pos == 4){
+				print("S Unknown Beat\r\n");}
+		}
+
+		/*
+		 * Increase processed data counter.
+		 */
+		input_processed += NUM_COLUMNS_BEAT;
+
+		/*
+		 * free ANN input/output memory
+		 */
+		emxDestroyArray_real_T(inputs);
+		emxDestroyArray_real_T(outputs);
+	}
+
+	/*
+	 * Close file
+	 */
+	status = fclose(beats_file);
+	if (status!=0) {
+		print("Error closing file. The program will stop\r\n");
+		XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_FILE_ERROR_STATE);
+		return XST_FAILURE;
+	}
+
+	/*
+	 * free all dynamic memory
+	 */
+	for (i=0; i<NUM_COLUMNS_DATA; i ++){
+		free(datas[i]);
+	}
+	free(datas);
+
+	for (i=0; i<NUM_COLUMNS_BEAT; i ++){
+		free(datas_input[i]);
+	}
+	free(datas_input);
+
+	for (i=0; i<NUM_COLUMNS_BEAT; i++){
+		free(result[i]);
+	}
+	free(result);
+
+	/*
+	 * Final
+	 */
+	print("The program has finished successfully\r\n");
+	XGpio_DiscreteWrite(&led,LED_CHANNEL,LED_SUCCESS_STATE);
+	return XST_SUCCESS;
+}

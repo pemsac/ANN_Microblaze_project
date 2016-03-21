@@ -1,0 +1,275 @@
+12:25:16.431 INFO  - Project 'Hardware_hw_platform' created. You can now create BSPs and application projects targeting this hardware platform. 
+12:28:01.108 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:28:23.054 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+12:28:51.221 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+
+12:30:09.563 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:31:13.979 INFO  - Successfully generated E:\Microblaze\Software\ANN_Heartbeat_Sorter\src\lscript.ld. 
+12:31:13.980 INFO  - Applying linker script to all configurations of project ANN_Heartbeat_Sorter. 
+12:31:13.980 INFO  - Setting rebuild state to true for all configurations of project ANN_Heartbeat_Sorter. 
+12:31:45.865 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:33:14.758 INFO  - Successfully generated E:\Microblaze\Software\bootloader\src\lscript.ld. 
+12:33:14.758 INFO  - Applying linker script to all configurations of project bootloader. 
+12:33:14.759 INFO  - Setting rebuild state to true for all configurations of project bootloader. 
+12:33:37.550 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:33:47.595 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+12:33:59.172 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+12:33:59.227 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+12:35:23.600 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:35:34.916 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:36:21.166 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:37:06.396 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+12:37:18.451 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+12:37:45.922 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+12:38:02.537 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:38:05.484 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+12:39:10.996 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:41:25.241 INFO  - System reset is completed. 
+12:44:16.645 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:44:29.705 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:44:34.223 INFO  - System reset is completed. 
+12:44:47.679 INFO  - System reset is completed. 
+12:44:47.679 INFO  - System reset is completed. 
+12:44:51.186 ERROR - Port COM6 is already in use. 
+12:45:23.272 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+12:45:23.273 WARN  - Terminating existing sessions on processor microblaze_0 
+12:46:32.328 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:46:37.507 INFO  - System reset is completed. 
+12:47:38.826 INFO  - System reset is completed. 
+12:48:45.734 INFO  - System reset is completed. 
+12:51:18.262 INFO  - Successfully generated E:\Microblaze\Software\bootloader\src\lscript.ld. 
+12:51:18.263 INFO  - Applying linker script to all configurations of project bootloader. 
+12:51:18.263 INFO  - Setting rebuild state to true for all configurations of project bootloader. 
+12:51:52.570 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:51:55.275 INFO  - System reset is completed. 
+12:52:35.552 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:52:39.870 INFO  - System reset is completed. 
+12:53:25.984 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+12:53:25.985 WARN  - Terminating existing sessions on processor microblaze_0 
+12:54:10.769 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+12:54:36.638 INFO  - System reset is completed. 
+12:57:14.832 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+12:57:14.833 WARN  - Terminating existing sessions on processor microblaze_0 
+12:57:49.783 INFO  - Successfully generated E:\Microblaze\Software\bootloader\src\lscript.ld. 
+12:57:49.783 INFO  - Applying linker script to all configurations of project bootloader. 
+12:57:49.783 INFO  - Setting rebuild state to true for all configurations of project bootloader. 
+13:02:11.172 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:02:21.291 INFO  - System reset is completed. 
+13:03:23.586 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error stopping at main.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+13:14:56.947 INFO  - Successfully generated E:\Microblaze\Software\bootloader\src\lscript.ld. 
+13:14:56.948 INFO  - Applying linker script to all configurations of project bootloader. 
+13:14:56.948 INFO  - Setting rebuild state to true for all configurations of project bootloader. 
+13:15:15.388 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:15:44.834 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+13:15:55.704 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+13:15:55.757 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+13:17:18.121 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:36:19.477 INFO  - Successfully generated E:\Microblaze\Software\ANN_Heartbeat_Sorter\src\lscript.ld. 
+13:36:19.477 INFO  - Applying linker script to all configurations of project ANN_Heartbeat_Sorter. 
+13:36:19.478 INFO  - Setting rebuild state to true for all configurations of project ANN_Heartbeat_Sorter. 
+13:36:58.656 INFO  - Successfully generated E:\Microblaze\Software\bootloader\src\lscript.ld. 
+13:36:58.657 INFO  - Applying linker script to all configurations of project bootloader. 
+13:36:58.657 INFO  - Setting rebuild state to true for all configurations of project bootloader. 
+13:38:10.087 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+13:38:30.104 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+13:38:30.159 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+13:39:00.487 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:39:03.537 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+13:39:13.394 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+13:39:13.450 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+13:40:15.404 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:43:18.378 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+13:49:24.400 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:51:38.573 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+13:52:04.055 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+15:46:31.665 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:08:41.599 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:14:47.558 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:15:07.653 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+23:15:07.705 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+23:16:49.534 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:22:28.228 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:22:50.584 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:23:52.016 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:28:53.966 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:29:21.559 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:30:55.309 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:31:21.466 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:32:29.874 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:33:57.155 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:34:12.219 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:35:15.445 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:37:13.545 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:37:43.734 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:38:32.620 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:38:46.023 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:39:11.749 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:39:32.378 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:39:54.924 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:40:28.710 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:40:46.512 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:41:22.976 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:42:28.841 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:44:08.289 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:44:31.214 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:44:57.569 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:45:36.504 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:46:06.363 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:46:54.764 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:47:46.157 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:47:50.209 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:48:59.712 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:49:38.120 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:50:30.362 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:55:18.535 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:07:32.083 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:08:59.703 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:11:10.860 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:11:53.383 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:12:00.611 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:13:20.886 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:15:11.177 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:18:24.496 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:18:57.324 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:19:05.803 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+00:19:05.858 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+00:22:07.306 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:22:26.982 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:22:39.145 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:23:08.872 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+00:23:08.922 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+00:24:28.434 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:32:49.363 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+23:14:02.060 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:18:32.280 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+23:18:33.139 INFO  - Refreshed build settings on project ANN_Heartbeat_Sorter 
+23:18:33.139 INFO  - Refreshed build settings on project bootloader 
+23:31:58.950 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:05:41.867 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:07:35.682 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:07:53.901 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+00:07:54.042 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+00:09:21.797 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:09:58.063 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:10:09.348 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:11:37.109 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:11:46.981 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:13:05.104 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:13:36.271 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:13:45.760 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:13:58.667 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:14:17.865 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+00:14:17.917 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+00:15:45.271 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:18:01.681 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:18:23.213 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:22:08.907 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:22:24.495 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:23:48.498 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:25:10.885 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+00:25:10.885 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+17:47:35.452 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+17:47:58.031 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+17:48:03.999 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+17:48:27.544 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+17:49:52.333 ERROR - No such port: COM6 
+17:50:07.853 INFO  - System reset is completed. 
+17:50:12.331 ERROR - No such port: COM6 
+17:51:09.509 INFO  - System reset is completed. 
+17:51:14.759 ERROR - No such port: COM6 
+17:52:42.388 INFO  - System reset is completed. 
+17:52:45.998 ERROR - No such port: COM6 
+17:53:16.862 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target request failed: Target is not responding (timed out).
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+17:54:27.481 INFO  - System reset is completed. 
+17:54:31.296 ERROR - No such port: COM6 
+17:55:48.291 INFO  - System reset is completed. 
+17:56:52.143 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+17:56:52.418 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target request failed: The program is not being run.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+18:08:11.888 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+18:08:24.270 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+18:11:20.915 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+18:12:49.740 INFO  - System reset is completed. 
+18:13:25.589 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Error stopping at main.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+18:13:39.140 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+18:14:04.728 INFO  - System reset is completed. 
+18:27:56.579 INFO  - System reset is completed. 
+18:43:35.809 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+18:43:36.156 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Target request failed: The program is not being run.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+19:07:02.834 ERROR - Unable to read in MSS file E:\Microblaze\Software\standalone_bsp\system.mss. 
+19:07:02.835 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+19:07:03.560 ERROR - Unable to read in MSS file E:\Microblaze\Software\standalone_bsp\system.mss. 
+19:08:32.640 ERROR - Unable to read in MSS file E:\Microblaze\Software\standalone_bsp\system.mss. 
+19:08:32.641 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+19:08:52.430 ERROR - Unable to read in MSS file E:\Microblaze\Software\standalone_bsp\system.mss. 
+19:08:52.430 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+19:09:08.748 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+19:17:14.358 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+19:19:02.573 INFO  - Settings changed on project standalone_bsp. Triggering a rebuild... 
+19:26:04.527 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+19:44:43.845 INFO  - System reset is completed. 
+19:44:45.251 ERROR - No such port: COM6 
+19:45:22.292 INFO  - System reset is completed. 
+19:48:01.397 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:48:03.402 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+23:49:10.383 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:53:45.878 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:54:06.740 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:54:13.826 INFO  - Converting 'microblaze' ELF file 'E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf' into bootable SREC format. 
+23:54:13.981 INFO  - Caching converted image as 'E:\Microblaze\Software\Hardware_hw_platform\cache\ANN_Heartbeat_Sorter.elf.srec'. 
+23:55:56.772 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:56:51.337 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+23:56:56.275 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+23:58:17.212 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:13:46.400 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:29:08.170 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:45:15.771 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:50:41.189 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:50:43.899 INFO  - Processor microblaze_0 will be used to program the selected flash controller. 
+00:52:14.200 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:52:36.261 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:53:04.122 INFO  - FPGA configured successfully with bitstream "E:/Microblaze/Software/Hardware_hw_platform/download.bit" 
+00:30:23.444 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

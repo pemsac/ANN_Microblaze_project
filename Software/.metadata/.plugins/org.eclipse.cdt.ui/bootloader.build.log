@@ -1,0 +1,6 @@
+00:45:01 **** Incremental Build of configuration Release for project bootloader ****
+make all 
+make: Nothing to be done for `all'.
+
+00:45:01 Build Finished (took 139ms)
+

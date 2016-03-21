@@ -1,0 +1,7 @@
+INFILE=E:\Microblaze\Hardware\implementation\system.ncd
+OUTFILE=E:\Microblaze\Hardware\implementation\system.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=E:\Microblaze\Hardware\implementation
+LICENSE=WebPack
+USER_INFO=__0_0_0

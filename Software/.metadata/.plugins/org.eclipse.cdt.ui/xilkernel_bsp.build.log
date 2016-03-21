@@ -1,0 +1,28 @@
+18:58:21 **** Build of project xilkernel_bsp ****
+make -k all 
+libgen -hw ../Hardware_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../Hardware_hw_platform/system.xml -pe microblaze_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+ERROR:EDK:3900 - issued from TCL procedure "::sw_xilkernel_v5_01_a::kernel_drc"
+   line 15
+   xilkernel () - Xilkernel for Microblaze requires a system timer device to be
+   specified. Please choose a valid peripheral instance in the systmr_dev
+   parameter. 
+ERROR:EDK:3414 - Error(s) while running DRCs.
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+18:58:26 Build Finished (took 5s.31ms)
+
