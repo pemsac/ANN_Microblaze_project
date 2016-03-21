@@ -7,6 +7,8 @@ Author: Pedro Marcos Solórzano
 
 Tutor: Luís Mengibar Pozo
 
+---------------------------------------------------------------
+
 Xilinx ISE project for Spartan 3E Starter Kit board.
 
 This is a first project that consists in an implementation of a Microblaze processor to run an ANN-based Heartbeat Sorter as Standalone,
