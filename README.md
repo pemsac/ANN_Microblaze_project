@@ -9,11 +9,11 @@ Tutor: Luís Mengibar Pozo
 
 ---------------------------------------------------------------
 
-Xilinx ISE project for Spartan 3E Starter Kit board.
+Heatbeats Classifier Software based in Artificial Neuronal Network(ANN).
 
-This is a first project that consists in an implementation of a Microblaze processor to run an ANN-based Heartbeat Sorter as Standalone,
-without any hardware acceleration.
+This software is developed to be run on a Spartan 3E with Microblaze soft-core
+processor  in order to check the proper working of the algorithm. The problem is
+This board isn't powerful enough to run this software, so the project was 
+decrapped. 
 
-This project was discontinued because the Spartan board isn't powerful enough to run this algorith in real time.
-
-ANN_project continues this development.
+Now the development continues in ANN_project.
