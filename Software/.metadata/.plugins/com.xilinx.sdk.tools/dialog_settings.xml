@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="flash (Bank Address: MEM0_BASEADDR)" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.FlashController"/>
-	<item value="0x00060000" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.ProgOffset"/>
-	<item value="E:\Microblaze\Software\ANN_Heartbeat_Sorter\Release\ANN_Heartbeat_Sorter.elf" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.ImageFile"/>
-	<item value="ddr_sdram (Bank Address: MPMC_BASEADDR)" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.ScratchController"/>
-	<item value="true" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.PlatformFlash"/>
-</section>

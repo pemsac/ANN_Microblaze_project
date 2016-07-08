@@ -1,6 +1,0 @@
-00:52:57 **** Incremental Build of configuration Release for project bootloader_debug ****
-make all 
-make: Nothing to be done for `all'.
-00:53:05 **** Auto Build of project standalone_bsp ****
-make -k all 
-'Finished building libraries'

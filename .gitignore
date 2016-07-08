@@ -45,3 +45,19 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#logs
+*.log
+*.jou
+
+# Eclipse 
+Debug*
+Release*
+bin/
+.metadata/
+.settings/
+.project
+.cproject
+
+#ISE
+cache

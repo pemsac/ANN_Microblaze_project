@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="E:\Microblaze\Software\bootloader_debug\Release\bootloader_debug.elf" key="Hardware_hw_platform-microblaze_0-initElf"/>
-	<item value="system.bit" key="Hardware_hw_platform-bitFile"/>
-	<item value="system_bd.bmm" key="Hardware_hw_platform-bmmFile"/>
-</section>
